@@ -8,7 +8,7 @@
 #           To reset the game, press r.
 #           To exit, simply press the exit button.
 
-# #### MAIN ######
+# #### MAIN.py ######
 
 import pygame
 import sys
@@ -102,7 +102,8 @@ if __name__ == "__main__":
             if choice.type == pygame.KEYUP:
                 display_paddle1.status = 'stop'
                 display_paddle2.status = 'stop'
-
+                
+        # if the game is running...
         if running:
             background_color()
             # Ball movement
