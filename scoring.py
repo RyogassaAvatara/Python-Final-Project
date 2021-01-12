@@ -8,12 +8,11 @@ class Scoring:
         self.point = point
         self.corX = corX
         self.corY = corY
-        self.font = pygame.font.SysFont("monospace", 80, bold=True)
-
-        self.tag = self.font.render(self.point, 0, color_white)
+        self.font = pygame.font.SysFont("monospace", 80, bold=True)  # Chosen Font
+        self.tag = self.font.render(self.point, 0, color_white)      # render points
         self.draw_score()
 
-    # Shows the score
+    # Display the score to the game
     def draw_score(self):
         self.display.blit(self.tag, (self.corX - self.tag.get_rect().width // 2, self.corY))
 
