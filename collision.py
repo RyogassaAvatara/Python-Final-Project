@@ -1,6 +1,7 @@
 import pygame
 
 
+# Collision Class
 class Collision:
     # Collision detection for when the ball hits the 1st paddle
     @staticmethod

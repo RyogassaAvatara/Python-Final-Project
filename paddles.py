@@ -1,6 +1,7 @@
 import pygame
 
 
+# Paddle Class
 class Paddles:
     def __init__(self, display, color, corX, corY, width, height):
         self.display = display

@@ -1,6 +1,7 @@
 import pygame
 
 
+# Ball Class
 class Ball:
     def __init__(self, display, color, corX, corY, radius):
         self.color = color

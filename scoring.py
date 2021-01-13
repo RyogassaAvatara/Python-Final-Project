@@ -1,6 +1,7 @@
 import pygame
 
 
+# Scoring Class
 class Scoring:
     def __init__(self, display, point, corX, corY):
         from pong import color_white
@@ -8,15 +9,15 @@ class Scoring:
         self.point = point
         self.corX = corX
         self.corY = corY
-        self.font = pygame.font.SysFont("monospace", 80, bold=True)  # Chosen Font
-        self.tag = self.font.render(self.point, 0, color_white)      # render points
+        self.font = pygame.font.SysFont("monospace", 80, bold=True)  # monospace font chosen for the score text
+        self.tag = self.font.render(self.point, 0, color_white)
         self.draw_score()
 
-    # Display the score to the game
+    # Shows the score
     def draw_score(self):
         self.display.blit(self.tag, (self.corX - self.tag.get_rect().width // 2, self.corY))
 
-    # Adds the score by 1
+    # Adds the score by 1 to the player who scored a goal (no limit)
     def add_score(self):
         from pong import color_white
         point = int(self.point) + 1
